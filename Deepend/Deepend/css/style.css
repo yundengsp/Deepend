@@ -1,0 +1,19 @@
+/* Go crazy with your own styles here */
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+.cheque_list th{
+    padding:10px 20px 10px 10px;
+}
+
+.cheque_list td{
+    padding:10px 20px 10px 10px;
+}
+
+.detail_row{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.detail_row label{
+    width:80px;
+    display:inline-block;
+}

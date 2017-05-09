@@ -1,0 +1,20 @@
+﻿@using System.Web.Mvc.Html    
+
+@model Deepend.Models.ChequeModel
+@{
+	Layout = "Master.cshtml";
+}
+<div class="container">
+    <div class="row clearfix">
+        <h1>Cheque Detail Page</h1>
+
+        <div class="detail_row"><label>Name: </label>@Model.Name</div>
+        <div class="detail_row"><label>Date: </label>@Model.Date</div>
+        <div class="detail_row"><label>Amount: </label>$@String.Format( "{0:#,##0.00}", @Model.Amount )</div>
+        <div class="detail_row"><label>Pay: </label>@Model.AmountInWord</div>
+        <div class="detail_row">
+            <a href="/">Go back to the Cheque List</a>
+        </div>
+    </div>
+    
+</div>
