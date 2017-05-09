@@ -7,17 +7,18 @@ using Umbraco.Web.Models;
 
 namespace Deepend.Models
 {
+    /// <summary>
+    /// Custom Viewmodel for renderring Cheque Detail Page
+    /// </summary>
     public class ChequeModel : RenderModel
     {
         public ChequeModel(IPublishedContent content) : base(content) { }
 
-        public int NodeId { get; set; }
-
         public string Name { get; set; }
 
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
 
-        public decimal Amount { get; set; }
+        public string Amount { get; set; }
 
         public string AmountInWord { get; set; }
 

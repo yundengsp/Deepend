@@ -28,8 +28,8 @@ namespace Deepend.Controllers
             ChequeModel customViewModel = new ChequeModel(model.Content)
             {
                 Name = node.GetProperty("accountName").Value,
-                Date= DateTime.Parse(node.GetProperty("date").ToString()),
-                Amount=Decimal.Parse(node.GetProperty("amount").Value),
+                Date= DateTime.Parse(node.GetProperty("date").ToString()).ToString("dd/MM/yyyy"),
+                Amount= String.Format("{0:#,##0.00}", node.GetProperty("amount").Value),
                 AmountInWord=DecimalToWords(node.GetProperty("amount").Value).ToUpper()
                 
             };
