@@ -675,3 +675,4 @@ System.Data.SqlServerCe.SqlCeException (0x80004005): There is a file sharing vio
  2017-05-09 13:30:14,999 [P14092/D2/T7] INFO  Umbraco.Core.PluginManager - Resolved umbraco.cms.businesslogic.macro.IMacroEngine (took 0ms)
  2017-05-09 13:30:20,316 [P14092/D2/T7] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
  2017-05-09 13:30:20,624 [P14092/D2/T10] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-09 13:31:09,057 [P14092/D2/T8] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-08 13:31:08
