@@ -29,9 +29,9 @@ namespace Deepend.Controllers
             {
                 Name = node.GetProperty("accountName").Value,
                 Date= DateTime.Parse(node.GetProperty("date").ToString()).ToString("dd/MM/yyyy"),
-                Amount= String.Format("{0:#,##0.00}", node.GetProperty("amount").Value),
+                Amount= Decimal.Parse(node.GetProperty("amount").Value).ToString("#,##0.00"),
                 AmountInWord=DecimalToWords(node.GetProperty("amount").Value).ToUpper()
-                
+               
             };
 
             return CurrentTemplate(customViewModel);
