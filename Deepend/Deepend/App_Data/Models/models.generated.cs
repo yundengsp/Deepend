@@ -19,90 +19,11 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "af2b747b18407f43")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "2f222364825b567c")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Blog Post</summary>
-	[PublishedContentModel("BlogPost")]
-	public partial class BlogPost : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "BlogPost";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public BlogPost(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogPost, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
-		}
-
-		///<summary>
-		/// Introduction
-		///</summary>
-		[ImplementPropertyType("introduction")]
-		public string Introduction
-		{
-			get { return this.GetPropertyValue<string>("introduction"); }
-		}
-	}
-
-	/// <summary>Blog Post Repository</summary>
-	[PublishedContentModel("BlogPostRepository")]
-	public partial class BlogPostRepository : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "BlogPostRepository";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public BlogPostRepository(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogPostRepository, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Hide in bottom navigation?
-		///</summary>
-		[ImplementPropertyType("umbracoNaviHide")]
-		public bool UmbracoNaviHide
-		{
-			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
-		}
-	}
-
 	/// <summary>Home</summary>
 	[PublishedContentModel("Home")]
 	public partial class Home : PublishedContentModel
@@ -162,85 +83,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public string SiteTitle
 		{
 			get { return this.GetPropertyValue<string>("siteTitle"); }
-		}
-	}
-
-	/// <summary>Landing Page</summary>
-	[PublishedContentModel("LandingPage")]
-	public partial class LandingPage : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "LandingPage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public LandingPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<LandingPage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
-		}
-
-		///<summary>
-		/// Hide in bottom navigation?
-		///</summary>
-		[ImplementPropertyType("umbracoNaviHide")]
-		public bool UmbracoNaviHide
-		{
-			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
-		}
-	}
-
-	/// <summary>Text Page</summary>
-	[PublishedContentModel("TextPage")]
-	public partial class TextPage : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "TextPage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public TextPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TextPage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
 		}
 	}
 
