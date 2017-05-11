@@ -2,7 +2,7 @@
 
 @{
     @***********Get the all the child nodes of chequeList node which is a child node of home page**********************@
-    var selection = Model.Content.Site().Children.Where(c => c.DocumentTypeAlias == "chequeList").First().Children;
+    var selection = Model.Content.Site().Children.Where(c => c.DocumentTypeAlias == "chequeList").First().Children.OrderByDescending(c=>DateTime.Parse(c.GetPropertyValue("date").ToString()));
 
 }
 <h1>Cheque List</h1>
